@@ -1,0 +1,95 @@
+﻿<Window x:Class="DiscographyTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Генератор дискографии"
+        Height="900"
+        Width="900"
+        MinHeight="700"
+        MinWidth="700"
+        WindowStartupLocation="CenterScreen">
+
+    <DockPanel Margin="10">
+
+        <GroupBox DockPanel.Dock="Top"
+                  Header="Настройки"
+                  Margin="0,0,0,10">
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <CheckBox
+                    Grid.Column="0"
+                    Content="Не загружать изображения"
+                    IsChecked="{Binding SkipImages}"
+                    VerticalAlignment="Top"/>
+
+                <StackPanel Grid.Column="2">
+                    <RadioButton
+                        x:Name="LayoutCenterRadio"
+                        Content="Обложка и треклист по центру"
+                        GroupName="CoverLayout"
+                        IsChecked="True"/>
+
+                    <RadioButton
+                        x:Name="LayoutClassicRadio"
+                        Content="Классика (треклист слева, обложка справа)"
+                        GroupName="CoverLayout"
+                        Margin="0,4,0,0"/>
+                </StackPanel>
+            </Grid>
+
+        </GroupBox>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+
+                <Button Content="Выбрать папку"
+                        Click="ChooseFolder_Click"
+                        Margin="0,0,0,5"/>
+
+                <TextBox x:Name="FolderPathText"
+                         IsReadOnly="True"
+                         Margin="0,0,0,10"/>
+
+                <TextBlock Text="Страна:"/>
+                <TextBox x:Name="CountryTextBox"
+                         Margin="0,0,0,10"/>
+
+                <TextBlock Text="Ссылка на фото исполнителя (опционально):"
+                           Margin="0,5,0,5"/>
+                <TextBox x:Name="ArtistImageTextBox"
+                         Margin="0,0,0,10"/>
+
+                <TextBlock Text="Ссылка на логотип исполнителя (опционально):"
+                           Margin="0,5,0,5"/>
+                <TextBox x:Name="ArtistLogoTextBox"
+                         Margin="0,0,0,10"/>
+
+                <Separator Margin="0,5,0,10"/>
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="AlbumsPanel"/>
+            </ScrollViewer>
+
+            <Button Grid.Row="2"
+                    x:Name="GenerateButton"
+                    Content="Сгенерировать"
+                    Click="Generate_Click"
+                    Height="45"
+                    Margin="0,10,0,0"
+                    IsEnabled="False"/>
+        </Grid>
+
+    </DockPanel>
+</Window>

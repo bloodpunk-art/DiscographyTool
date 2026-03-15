@@ -1,0 +1,47 @@
+e:\Defoe\Progs\DiscographyTool\
+├── .vs
+│   ├── DiscographyTool.slnx
+│   │   ├── DesignTimeBuild
+│   │   │   └── .dtbcache.v2
+│   │   ├── FileContentIndex
+│   │   │   ├── d21df87c-9edf-41e7-ac66-340761627b5f.vsidx
+│   │   │   ├── d608cef0-e29e-47da-a009-e8d34cc5ce6e.vsidx
+│   │   │   └── eac91024-4134-4ae9-b465-4d0ea3b227e9.vsidx
+│   │   └── v18
+│   │       ├── .futdcache.v2
+│   │       ├── .suo
+│   │       ├── DocumentLayout.backup.json
+│   │       └── DocumentLayout.json
+│   └── ProjectEvaluation
+│       ├── discographytool.metadata.v10.bin
+│       ├── discographytool.projects.v10.bin
+│       └── discographytool.strings.v10.bin
+├── App.config
+├── App.xaml
+├── App.xaml.cs
+├── AssemblyInfo.cs
+├── Covers
+│   ├── AlbumCoverUploadService.cs
+│   ├── ArtistImageService.cs
+│   └── CoverProcessor.cs
+├── DiscographyTool.csproj
+├── DiscographyTool.csproj.user
+├── DiscographyTool.ico
+├── DiscographyTool.slnx
+├── MainWindow.xaml
+├── MainWindow.xaml.cs
+├── Models
+│   ├── AlbumInfo.cs
+│   └── TrackInfo.cs
+├── Networking
+│   ├── ImageBanSession.cs
+│   └── ImageBanUploader.cs
+├── Properties
+│   └── PublishProfiles
+│       ├── FolderProfile.pubxml
+│       └── FolderProfile.pubxml.user
+├── UI
+│   ├── AlbumsPanelBuilder.cs
+│   ├── FolderPicker.cs
+│   └── MainWindowState.cs
+
